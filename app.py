@@ -14,4 +14,7 @@ class Message(Resource):
 
 api.add_resource(Message, "/message")
 
-app.run(port=5000)
+
+@app.route("/")
+def hello():
+    return "hello world"
