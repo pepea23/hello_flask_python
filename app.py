@@ -8,7 +8,8 @@ messageCount = 0
 
 class Message(Resource):
     def get(self, name):
-        return {"you got message":messageCount += 1}
+        messageCount += 1
+        return {"you got message": messageCount}
 
 
 api.add_resource(Message, "/message")
